@@ -1,0 +1,81 @@
+
+
+Community Standards | Transparency Center
+
+
+
+
+
+
+
+
+
+ Transparency Center PoliciesCommunity StandardsPolicies that outline what is and isn't allowed on our apps.Meta Advertising StandardsPolicies for ad content and business assets.Other policiesOther policies that apply to Meta technologies.How Meta improvesHow we update our policies, measure results, work with others, and more.Age-Appropriate ContentExplore how we help teens have safe, positive experiences on Facebook and Instagram.EnforcementDetecting violationsHow technology and review teams help us detect and review violating content and accounts.Taking actionOur three-part approach to content enforcement: remove, reduce and inform.SecurityThreat disruptions
+              How we take down coordinated adversarial networks to protect people using our services
+            Security threats
+            Challenges we investigate and counter around the globe
+            Threat reporting
+       Security research into the adversarial networks we’ve taken down since 2017
+            FeaturesOur Approach To Dangerous Organizations and Individuals
+                How we approach dangerous organizations and individuals. Our approach to the opioid epidemic
+                How we support communities in the face of the opioid epidemic.
+              Our approach to electionsHow we help prevent interference, empower people to vote and more.Our approach to misinformationHow we work with independent fact-checkers, and more, to identify and take action on misinformation.
+            Our approach to newsworthy contentHow we assess content for newsworthiness.
+            Our approach to Facebook Feed ranking
+              How we reduce problematic content in News Feed.
+            Our approach to explaining ranking
+                How we build AI systems.
+              GovernanceGovernance innovationOversight Board overviewHow to appeal to the Oversight BoardOversight Board casesOversight Board recommendationsCreating the Oversight BoardOversight Board: Further asked questionsMeta’s Bi-Annual Updates on the Oversight BoardResearch toolsContent Library and Content Library APIComprehensive access to public data from Facebook and InstagramAd Library toolsComprehensive and searchable database of all ads currently running across Meta technologiesOther research tools and datasets Additional tools for in-depth research on Meta technologies and programsReportsCommunity Standards Enforcement ReportQuarterly report on how well we're doing at enforcing our policies on the Facebook app and Instagram.Intellectual PropertyReport on how well we're helping people protect their intellectual property.Government Requests for User DataReport on government request for people's data.Content Restrictions Based on Local LawReport on when we restrict content that's reported to us as violating local law.Internet DisruptionsReport on intentional internet restrictions that limit people's ability to access the internet.Widely Viewed Content Report
+              Quarterly report on what people see on Facebook, including the content that receives the widest distribution during the quarter.
+            Regulatory and Other Transparency Reports
+                Download current and past regulatory reports for Facebook and Instagram.
+              HomePoliciesCommunity StandardsThe Community Standards outline what is and isn't allowed on Facebook, Instagram, Messenger and Threads.IntroductionEvery day, people use Facebook, Instagram, Messenger and Threads to share their experiences, connect with friends and family, and build communities. Our services enable billions of people to freely express themselves across countries and cultures and in dozens of languages.Meta recognizes how important it is for Facebook, Instagram, Messenger and Threads to be places where people feel empowered to communicate, and we take our role seriously in keeping abuse off the service. That’s why we developed standards for what is and isn’t allowed on these services. These standards are based on feedback from people and the advice of experts in fields like technology, public safety and human rights. To ensure everyone’s voice is valued, we take great care to create standards that include different views and beliefs, especially from people and communities that might otherwise be overlooked or marginalized.Please note that the US English version of the Community Standards reflects the most up to date set of the policies and should be used as the primary document.Our commitment to voiceThe goal of our Community Standards is to create a place for expression and give people a voice. Meta wants people to be able to talk openly about the issues that matter to them, whether through written comments, photos, music, or other artistic mediums, even if some may disagree or find them objectionable. In some cases, we allow content—which would otherwise go against our standards—if it’s newsworthy and in the public interest. We do this only after weighing the public interest value against the risk of harm, and we look to international human rights standards to make these judgments. In other cases, we may remove content that uses ambiguous or implicit language when additional context allows us to reasonably understand that the content goes against our standards.Our commitment to expression is paramount, but we recognize the internet creates new and increased opportunities for abuse. For these reasons, when we limit expression, we do it in service of one or more of the following values:AUTHENTICITYWe want to make sure the content people see is authentic. We believe that authenticity creates a better environment for sharing, and that’s why we don’t want people using our services to misrepresent who they are or what they’re doing.SAFETYWe’re committed to making Facebook, Instagram, Messenger and Threads safe places. We remove content that could contribute to a risk of harm to the physical security of persons. Content that threatens people has the potential to intimidate, exclude or silence others and isn’t allowed on our services.PRIVACYWe’re committed to protecting personal privacy and information. Privacy gives people the freedom to be themselves, choose how and when to share on our services and connect more easily. DIGNITYWe believe that all people are equal in dignity and rights. We expect that people will respect the dignity of others and not harass or degrade others.Community StandardsOur Community Standards apply to everyone, all around the world, and to all types of content, including AI-generated content.Each section of our Community Standards starts with a “Policy Rationale” that sets out the aims of the policy followed by specific policy lines that outline:  Content that's not allowed; and  Content that requires additional information or context to enforce on, content that is allowed with a warning screen or content that is allowed but can only be viewed by adults aged 18 and older. VIOLENCE AND CRIMINAL BEHAVIORCoordinating Harm and Promoting CrimeDangerous Organizations and IndividualsFraud, Scams, and Deceptive PracticesRestricted Goods and ServicesViolence and IncitementSAFETYAdult Sexual ExploitationBullying and HarassmentChild Sexual Exploitation, Abuse, and NudityHuman ExploitationSuicide, Self-Injury, and Eating DisordersOBJECTIONABLE CONTENTAdult Nudity and Sexual ActivityAdult Sexual Solicitation and Sexually Explicit LanguageHate SpeechPrivacy ViolationsViolent and Graphic ContentINTEGRITY AND AUTHENTICITYAccount Integrity Authentic Identity RepresentationCybersecurityInauthentic BehaviorMemorializationMisinformationSpamRESPECTING INTELLECTUAL PROPERTYThird-Party Intellectual Property InfringementUsing Meta Intellectual Property and LicensesCONTENT-RELATED REQUESTS AND DECISIONSAdditional Protection of MinorsLocally Illegal Content, Products, or ServicesUser RequestsNEXTOther policies Transparency Center POLICIESCommunity StandardsMeta Advertising StandardsOther policiesHow Meta improvesAge-Appropriate ContentENFORCEMENTDetecting violationsTaking actionSECURITYThreat disruptionsSecurity threatsThreat reportingFEATURESOur Approach To Dangerous Organizations and IndividualsOur approach to electionsOur approach to misinformationOur approach to newsworthy contentOur approach to Facebook Feed rankingOur approach to explaining rankingGOVERNANCEGovernance innovationOversight Board overviewHow to appeal to the Oversight BoardOversight Board casesOversight Board recommendationsCreating the Oversight BoardOversight Board: Further asked questionsMeta’s Bi-Annual Updates on the Oversight BoardREPORTSCommunity Standards Enforcement ReportIntellectual PropertyGovernment Requests for User DataContent Restrictions Based on Local LawInternet DisruptionsWidely Viewed Content ReportRegulatory and Other Transparency ReportsRESEARCH TOOLSContent Library and Content Library APIAd Library ToolsOther research tools and datasetsPrivacy PolicyTerms of ServiceCookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

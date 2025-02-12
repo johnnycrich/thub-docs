@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+				
+		Terms of Use	</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="title" content="Terms of Use"/>
+    <meta name="description" content="Yareny is a new social network similar to Twitter, but with much longer text length and less restrictions. It is modest, clean and peaceful. Give it a try!"/>
+    <meta name="keywords" content="yareny, social media, social networking, social media management, social media platforms, social networking, new social networks 2023"/>
+    <meta name="image" content="https://yareny.com/themes/default/statics/img/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	
+	
+	<link rel="stylesheet" href="https://yareny.com/themes/default/statics/css/libs/animate.min.css?v=1.3.5">
+	<link rel="stylesheet" href="https://yareny.com/themes/default/statics/css/css-libs.css">
+	<link rel="stylesheet" href="https://yareny.com/themes/default/statics/css/master.styles.css?v=1.3.5">
+	<link rel="stylesheet" href="https://yareny.com/themes/default/statics/css/master.styles.rtl.css?v=1.3.5">
+
+	
+	<link rel="stylesheet" href="https://yareny.com/themes/default/statics/css/libs/jquery.fancybox.css?v=1.3.5">
+	<link rel="stylesheet" href="https://yareny.com/themes/default/statics/js/libs/plyr/plyr-code/plyr.css?v=1.3.5">
+	<link rel="icon" href="https://yareny.com/themes/default/statics/img/favicon.png" type="image/png">
+	<link rel="icon" href="https://yareny.com/themes/default/statics/img/favicon.png" type="image/x-icon">
+
+	<script src="https://yareny.com/themes/default/statics/js/libs/jquery-3.5.1.min.js?v=1.3.5"></script>
+			<script src="https://yareny.com/themes/default/statics/js/libs/vuejs/vue-v2.6.11.min.js?v=1.3.5"></script>
+		
+	<script src="https://yareny.com/themes/default/statics/js/libs/vuejs/vue-plugins/validators.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/vuejs/vue-plugins/vuelidate.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/jquery-plugins/jquery.form-v4.2.2.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/popper.1.12.9.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/bootstrap.v4.0.0.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/sticky-sidebar/source/jquery.sticky-sidebar.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/master.script.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/custom.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/clipboard.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/jquery-plugins/jquery.fancybox.min.js?v=1.3.5"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/lozad.min.js"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/waitme/waitMe.min.js"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/txt.autoresize.min.js"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/audio-recorder.js"></script>
+	<script src="https://yareny.com/themes/default/statics/js/libs/plyr/plyr-code/plyr.min.js"></script>
+
+
+	
+	
+	<script>
+		/*
+Enter your custom JS code here.
+
+Please note that the code entered here will be added to the <head> tag.
+*/	</script>
+	<style>
+		/*
+Enter your custom CSS code here.
+
+Please note that the code entered here will be added to the <head> tag.
+*/	</style>
+</head>
+<body dir="ltr" class="cl-app-stat_pages" data-page-tab="none" data-skin="default" data-bg="default">
+	<div class="main-preloader-holder" id="main-preloader-holder">
+		<div class="main-preloader">
+			<div class="loading">
+				<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+			</div>
+		</div>
+	</div>
+	<div data-el="main-content-holder">
+		<main class="main-content-container guest-mode">
+							<div class="main-content-container-inner">
+																		<div class="left-sb-container sidebar" data-app="left-sidebar">
+	<div class="sidebar__inner">
+		<div class="guest-welcome">
+			<div class="login-form">
+				<form class="form" id="cl-login-vue-app" v-on:submit="submit_form($event)" autocomplete="off">
+	<div class="form-title ctform-title">
+		<h2>
+			Sign in		</h2>
+	</div>
+	<div class="form-group ct-input">
+		<!--label class="input-label">
+			Username or E-mail		</label-->
+		<input name="email" v-model.trim.lazy="$v.email.$model" type="text" class="form-control" placeholder="Email address or username">
+		<div class="invalid-main-feedback" v-if="is_valid_email">
+			{{invalid_feedback_email}}
+		</div>
+		<div class="cticon">
+		    <img src="https://yareny.com/themes/default/statics/md_icons/envelope.svg" alt="user icon">
+		</div>
+	</div>
+	<div class="form-group ct-input">
+		<!--label class="input-label">
+			Password		</label-->
+		<div class="password-ctrl">
+			<input name="password" v-model.trim="$v.password.$model" v-bind:type="password_display" class="form-control" placeholder="Password">
+			
+			<button class="password-ctrl" type="button" v-on:click="password_display_toggle">
+				<span v-if="password_display == 'password'">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"/></svg>				</span>
+				<span v-else>
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5-.59 1.22-1.42 2.27-2.41 3.12l1.41 1.41c1.39-1.23 2.49-2.77 3.18-4.53C21.27 7.11 17 4 12 4c-1.27 0-2.49.2-3.64.57l1.65 1.65C10.66 6.09 11.32 6 12 6zm-1.07 1.14L13 9.21c.57.25 1.03.71 1.28 1.28l2.07 2.07c.08-.34.14-.7.14-1.07C16.5 9.01 14.48 7 12 7c-.37 0-.72.05-1.07.14zM2.01 3.87l2.68 2.68C3.06 7.83 1.77 9.53 1 11.5 2.73 15.89 7 19 12 19c1.52 0 2.98-.29 4.32-.82l3.42 3.42 1.41-1.41L3.42 2.45 2.01 3.87zm7.5 7.5l2.61 2.61c-.04.01-.08.02-.12.02-1.38 0-2.5-1.12-2.5-2.5 0-.05.01-.08.01-.13zm-3.4-3.4l1.75 1.75c-.23.55-.36 1.15-.36 1.78 0 2.48 2.02 4.5 4.5 4.5.63 0 1.23-.13 1.77-.36l.98.98c-.88.24-1.8.38-2.75.38-3.79 0-7.17-2.13-8.82-5.5.7-1.43 1.72-2.61 2.93-3.53z"/></svg>				</span>
+			</button>
+		</div>
+		<div class="invalid-main-feedback" v-if="is_valid_password">
+			{{invalid_feedback_pass}}
+		</div>
+		<div v-else-if="unsuccessful_attempt" class="form-group invalid-main-feedback mb-20">
+			A user with such credentials is not found. Check the data entered and try again.		</div>
+		<div class="cticon">
+		    <img src="https://yareny.com/themes/default/statics/md_icons/lock.svg" alt="user icon">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-cta-link ctlink">
+			<span>
+				Forgot your password?			</span>
+			<a href="https://yareny.com/guest?auth=forgot_pass">
+				Reset my password			</a>
+		</div>
+	</div>
+	<div class="form-group ct-btn">
+		<button v-if="submitting" disabled="true" type="button" class="btn btn-custom main-inline lg btn-block">
+			Please wait		</button>
+		<button v-else-if="done" disabled="true" type="button" class="btn btn-custom main-inline lg btn-block">
+			Done! Please wait..		</button>
+		<button  v-else v-bind:disabled="($v.$invalid == true)" class="btn btn-custom main-inline lg btn-block">
+			Login		</button>
+	</div>
+	
+	<div class="form-group no-mb">
+		<div class="form-cta-link ctlink">
+			<span>
+				Don't have an account?			</span>
+			<a href="https://yareny.com/guest?auth=signup">
+				Sign up			</a>
+		</div>
+	</div>
+	<input type="hidden" class="d-none" value="1735934814:65385e550698e44f70e9a52512bbfd50ace46861" name="hash">
+</form>			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	"use strict";
+	
+	$(document).ready(function($) {
+		Vue.use(window.vuelidate.default);
+
+		if ($("form#cl-login-vue-app").length) {
+			new Vue({
+				"el": "#cl-login-vue-app",
+				data: {
+					email: "",
+					password: "",
+					submitting: false,
+					done: false,
+					unsuccessful_attempt: false,
+					invalid_feedback_email: "",
+					invalid_feedback_pass: "",
+					password_display: "password"
+				},
+				computed: {
+					is_valid_email: function() {
+						if (this.$v.email.required == true && this.$v.email.$error) {
+							this.invalid_feedback_email = "The username you entered is not valid";
+							return true;
+						}
+
+						else {
+							this.invalid_feedback_email = "";
+							return false;
+						}
+					},
+					is_valid_password: function() {
+						if(this.$v.password.required == true && this.$v.password.$error) {
+							this.invalid_feedback_pass = "The password you entered is not valid";
+							return true;
+						}
+
+						else {
+							this.invalid_feedback_pass = "";
+							return false;
+						}
+					}
+				},
+				validations: {
+					email: {
+						required: window.validators.required,
+						min_length: window.validators.minLength(3),
+						max_length: window.validators.maxLength(55)
+					},
+					password: {
+						required: window.validators.required,
+						min_length: window.validators.minLength(6),
+						max_length: window.validators.maxLength(20)
+					}
+				},
+				methods: {
+					submit_form: function(_self = false) {
+						_self.preventDefault();
+
+						var _app_ = this;
+
+						$(_self.target).ajaxSubmit({
+							url: "https://yareny.com/native_api/auth/login",
+							type: 'POST',
+							dataType: 'json',
+							beforeSend: function() {
+								_app_.submitting = true;
+							},
+							success: function(data) {
+								if (data.status == 200) {
+									_app_.done = true;
+
+									delay(function() {
+										cl_redirect("https://yareny.com/home");
+									}, 1000);
+								}
+
+								else {
+									_app_.unsuccessful_attempt = true;
+
+									delay(function() {
+										_app_.unsuccessful_attempt = false;
+									}, 3000);
+								}
+							},
+							complete: function() {
+								_app_.submitting = false;
+							}
+						});
+					},
+					password_display_toggle: function() {
+						var _app_ = this;
+
+						if (_app_.password_display == "text") {
+							_app_.password_display = "password";
+						}
+						else{
+							_app_.password_display = "text";
+						}
+					}
+				}
+			});
+		}
+
+		if ($("form#cl-signup-vue-app").length) {
+			new Vue({
+				"el": "#cl-signup-vue-app",
+				data: {
+					done: false,
+					email: "",
+					password: "",
+					uname: "",
+					fname: "",
+					lname: "",
+					submitting: false,
+					invalid_feedback_email: "",
+					invalid_feedback_pass: "",
+					invalid_feedback_uname: "",
+					tos_agree: false,
+					uname_taken: false,
+					email_taken: false,
+					uname_denied: false,
+					email_denied: false,
+					process_failed: false,
+					grecaptcha_error: false,
+					password1_display: "password",
+					password2_display: "password",
+					invite_code: "",
+					grecaptcha: "off"
+				},
+				computed: {
+					is_valid_uname: function() {
+						if (this.$v.uname.required == true && this.$v.uname.$error) {
+							this.invalid_feedback_uname = "This username does not match the valid format. Please select a username of no more than 25 characters using only letters (a-z) numbers and underscores";
+							return true;
+						}
+
+						else if(this.uname_taken == true) {
+							this.invalid_feedback_uname = "This username is already taken, please select another";
+							return true;
+						}
+						
+						else if(this.uname_denied == true) {
+							this.invalid_feedback_uname = "This username is reserved, please select another";
+							return true;
+						}
+
+						else {
+							this.invalid_feedback_uname = "";
+							return false;
+						}
+					},
+					is_valid_email: function() {
+						if (this.$v.email.required == true && this.$v.email.$error) {
+							this.invalid_feedback_email = "The email address you entered does not match the valid format.";
+							return true;
+						}
+
+						else if (this.email_taken == true) {
+							this.invalid_feedback_email = "This email address is already taken";
+							return true;
+						}
+
+						else if (this.email_denied == true) {
+							this.invalid_feedback_email = "This email address is reserved and not available for use";
+							return true;
+						}
+
+						else {
+							this.invalid_feedback_email = "";
+							return false;
+						}
+					},
+					is_valid_password: function() {
+						if (this.$v.password.required == true && this.$v.password.$error) {
+							this.invalid_feedback_pass = "Password must be between 6 and 20 characters long";
+							return true;
+						}
+
+						else {
+							this.invalid_feedback_pass  = "";
+							return false;
+						}
+					},
+					is_valid_form: function() {
+						return (this.$v.$invalid == false && this.tos_agree == true);
+					}
+				},
+				validations: {
+					uname: {
+						required: window.validators.required,
+						min_length: window.validators.minLength(3),
+						max_length: window.validators.maxLength(25),
+						is_alpha_num: cl_uname_valid
+					},
+					email: {
+						required: window.validators.required,
+						email: window.validators.email,
+						min_length: window.validators.minLength(8),
+						max_length: window.validators.maxLength(55)
+					},
+					password: {
+						required: window.validators.required,
+						min_length: window.validators.minLength(6),
+						max_length: window.validators.maxLength(20)
+					}
+				},
+				methods: {
+					submit_form: function(_self = false) {
+						_self.preventDefault();
+
+						var _app_ = this;
+
+						if (_app_.grecaptcha == "on") {
+							var grecap_res = grecaptcha.getResponse();
+
+							if (grecap_res.length < 1) {
+
+								_app_.grecaptcha_error = true;
+
+								return false;
+							}
+						}
+
+						$(_self.target).ajaxSubmit({
+							url: "https://yareny.com/native_api/auth/signup",
+							type: 'POST',
+							dataType: 'json',
+							data: {
+								invite_code: _app_.invite_code
+							},
+							beforeSend: function() {
+								_app_.submitting     = true;
+								_app_.uname_taken    = false;
+								_app_.email_taken    = false;
+								_app_.uname_denied   = false;
+								_app_.email_denied   = false;
+								_app_.process_failed = false;
+							},
+							success: function(data) {
+								if (data.status == 200) {
+
+									_app_.done = true;
+
+									delay(function() {
+										cl_redirect("https://yareny.com/start_up");
+									}, 1500);
+								}
+								else if(data.status == 401) {
+									_app_.done = true;
+
+									delay(function() {
+										cl_redirect("https://yareny.com/confirm_registration");
+									}, 1500);
+								}
+								else {
+									if (data.err_code == "doubling_uname") {
+										_app_.uname_taken = true;
+									}
+
+									else if(data.err_code == "doubling_email") {
+										_app_.email_taken = true;
+									}
+
+									else if(data.err_code == "denied_email") {
+										_app_.email_denied = true;
+									}
+
+									else if(data.err_code == "denied_uname") {
+										_app_.uname_denied = true;
+									}
+
+									else {
+										_app_.process_failed = true;
+									}
+								}
+							},
+							complete: function() {
+								_app_.submitting = false;
+							}
+						});
+					},
+					password1_display_toggle: function() {
+						var _app_ = this;
+
+						if (_app_.password1_display == "text") {
+							_app_.password1_display = "password";
+						}
+						else{
+							_app_.password1_display = "text";
+						}
+					}
+				}
+			});
+		}
+
+		if ($("form#cl-resetpass-vue-app").length) {
+			new Vue({
+				"el": "#cl-resetpass-vue-app",
+				data: {
+					email: "",
+					submitting: false,
+					invalid_feedback_email: "",
+					process_failed: false,
+					process_succeeded: false,
+					unknown_email: false,
+				},
+				computed: {
+					is_valid_email: function() {
+						if (this.$v.email.required == true && this.$v.email.$error) {
+							this.invalid_feedback_email = "The email address you entered does not match the valid format.";
+							return true;
+						}
+
+						else if(this.unknown_email == true) {
+							this.invalid_feedback_email = "We can not find an account with this email address!";
+							return true;
+						}
+
+						else {
+							this.invalid_feedback_email = "";
+							return false;
+						}
+					},
+					is_valid_form: function() {
+						return (this.$v.$invalid == false);
+					}
+				},
+				validations: {
+					email: {
+						required: window.validators.required,
+						email: window.validators.email,
+						min_length: window.validators.minLength(8),
+						max_length: window.validators.maxLength(55)
+					}
+				},
+				methods: {
+					submit_form: function(_self = false) {
+						_self.preventDefault();
+
+						var _app_ = this;
+
+						$(_self.target).ajaxSubmit({
+							url: "https://yareny.com/native_api/auth/resetpass",
+							type: 'POST',
+							dataType: 'json',
+							beforeSend: function() {
+								_app_.submitting     = true;
+								_app_.process_failed = false;
+								_app_.unknown_email  = false;
+							},
+							success: function(data) {
+								if (data.status == 200) {
+									_app_.process_succeeded = true;
+								}
+								else {
+									if (data.err_code == "unknown_email") {
+										_app_.unknown_email = true;
+									}
+
+									else {
+										_app_.process_failed = true;
+									}
+								}
+							},
+							complete: function() {
+								_app_.submitting = false;
+							}
+						});
+					}
+				}
+			});
+		}
+
+			});
+</script>											
+					<div data-el="timeline-container-wrapper" class="timeline-container-wrapper">
+						<div data-el="timeline-content" class="timeline-container-inner">
+							<div class="timeline-container" data-app="stat_pages">
+	<div class="timeline-header" data-el="tl-header">
+		<div class="timeline-header__botline">
+			<div class="lp">
+				<div class="nav-link-holder">
+					<a href="https://yareny.com/terms_of_use">
+						Terms of Use					</a>
+				</div>
+			</div>
+			<div class="cp">
+				<a href="https://yareny.com">
+					<img src="https://yareny.com/themes/default/statics/img/logo.png" alt="Logo">
+				</a>
+			</div>
+			<div class="rp">
+				<div class="nav-link-holder">
+					<span class="go-back" onclick="SMColibri.go_back();">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="stat-page-content">
+		<h2><strong>Terms and Conditions</strong></h2>
+
+<p>Welcome to Yareny Social Network!</p>
+
+<p>These terms and conditions outline the rules and regulations for the use of Yareny Social Network's Website, located at www.yareny.com.</p>
+
+<p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Yareny Social Network if you do not agree to take all of the terms and conditions stated on this page.</p>
+
+<p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+
+<h3><strong>Cookies</strong></h3>
+
+<p>We employ the use of cookies. By accessing Yareny Social Network, you agreed to use cookies in agreement with the Yareny Social Network's Privacy Policy. </p>
+
+<p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+
+<h3><strong>License</strong></h3>
+
+<p>Unless otherwise stated, Yareny Social Network and/or its licensors own the intellectual property rights for all material on Yareny Social Network. All intellectual property rights are reserved. You may access this from Yareny Social Network for your own personal use subjected to restrictions set in these terms and conditions.</p>
+
+<p>You must not:</p>
+<ul>
+    <li>Republish material from Yareny Social Network</li>
+    <li>Sell, rent or sub-license material from Yareny Social Network</li>
+    <li>Reproduce, duplicate or copy material from Yareny Social Network</li>
+    <li>Redistribute content from Yareny Social Network</li>
+</ul>
+
+<p>This Agreement shall begin on the date hereof. Our Terms and Conditions were created with the help of the <a href="https://www.termsandconditionsgenerator.com/">Free Terms and Conditions Generator</a>.</p>
+
+<p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Yareny Social Network does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Yareny Social Network,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Yareny Social Network shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+
+<p>Yareny Social Network reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+
+<p>You warrant and represent that:</p>
+
+<ul>
+    <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
+    <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
+    <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
+    <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
+</ul>
+
+<p>You hereby grant Yareny Social Network a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
+
+<h3><strong>Hyperlinking to our Content</strong></h3>
+
+<p>The following organizations may link to our Website without prior written approval:</p>
+
+<ul>
+    <li>Government agencies;</li>
+    <li>Search engines;</li>
+    <li>News organizations;</li>
+    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+</ul>
+
+<p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
+
+<p>We may consider and approve other link requests from the following types of organizations:</p>
+
+<ul>
+    <li>commonly-known consumer and/or business information sources;</li>
+    <li>dot.com community sites;</li>
+    <li>associations or other groups representing charities;</li>
+    <li>online directory distributors;</li>
+    <li>internet portals;</li>
+    <li>accounting, law and consulting firms; and</li>
+    <li>educational institutions and trade associations.</li>
+</ul>
+
+<p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Yareny Social Network; and (d) the link is in the context of general resource information.</p>
+
+<p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
+
+<p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Yareny Social Network. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
+
+<p>Approved organizations may hyperlink to our Website as follows:</p>
+
+<ul>
+    <li>By use of our corporate name; or</li>
+    <li>By use of the uniform resource locator being linked to; or</li>
+    <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
+</ul>
+
+<p>No use of Yareny Social Network's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+
+<h3><strong>iFrames</strong></h3>
+
+<p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+
+<h3><strong>Content Liability</strong></h3>
+
+<p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
+
+<h3><strong>Your Privacy</strong></h3>
+
+<p>Please read Privacy Policy</p>
+
+<h3><strong>Reservation of Rights</strong></h3>
+
+<p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+
+<h3><strong>Removal of links from our website</strong></h3>
+
+<p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
+
+<p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+
+<h3><strong>Disclaimer</strong></h3>
+
+<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+
+<ul>
+    <li>limit or exclude our or your liability for death or personal injury;</li>
+    <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+    <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+    <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+</ul>
+
+<p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+
+<p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>	</div>
+</div>						</div>
+
+						<div data-el="spa-preloader" class="spa-preloader d-none">
+							<div class="spa-preloader-inner">
+								<span class="spinner-icon">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><path opacity="0.6" fill="#1ca1f3" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path><path fill="#1ca1f3" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(299.57 20 20)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.7s" repeatCount="indefinite"></animateTransform></path></svg>
+								</span>
+							</div>
+						</div>
+					</div>
+
+											<div class="right-sb-container sidebar" data-app="right-sidebar">
+	<div class="sidebar__inner">
+		<div class="right-sidebar">
+			<div class="right-sidebar__header">
+				<form class="form sidebar-searchbar" id="vue-main-search-app" v-on:submit="search_onsubmit" autocomplete="off">
+					<div class="sidebar-searchbar__input">	
+						<input v-model="search_query" v-on:input="search" type="text" class="form-control" placeholder="Search for people, hashtags..">
+						<span class="keyword-input__left-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>						</span>
+						<span class="keyword-input__right-spinner" v-if="searching">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><path opacity="0.6" fill="#1ca1f3" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path><path fill="#1ca1f3" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(299.57 20 20)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.7s" repeatCount="indefinite"></animateTransform></path></svg>
+						</span>
+						<span v-on:click="cancel" class="keyword-input__right-icon" v-else-if="search_result">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>						</span>
+					</div>
+					<div class="sidebar-searchbar__result" v-show="search_result">
+						<div class="search-result">
+							<div class="search-result__body">
+								<div class="search-result__list" data-an="result"></div>
+							</div>
+							<div class="search-result__footer" v-bind:class="{'disabled': (advanced_search != true)}">
+								<a v-bind:href="search_page_url" data-spa="true">
+									<button class="btn btn-custom main-outline md btn-block">
+										Advanced search									</button>
+								</a>
+							</div>
+						</div>						
+					</div>
+				</form>
+			</div>
+			
+												<div class="right-sidebar__ads">
+						<div class="cl-google-ads">
+							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7133394092277208"
+     crossorigin="anonymous"></script>						</div>
+					</div>
+							
+			<div class="right-sidebar__body">	
+				<div class="sidebar-content sidebar-content_users">
+					<div class="sidebar-content__header">
+						Who to follow					</div>
+					<div class="sidebar-content__body">
+													<div class="sidebar-users">
+																	<div class="sidebar-users__item">
+										<div class="sidebar-users__item-avatar">
+											<a href="https://yareny.com/admin" class="block-link" data-spa="true">
+												<img src="https://yareny.com/upload/avatars/2023/03/IHVMftUH7FkS6w5T3l4a_03_1164837b048b220a091763d4960ca0ee_thumbnail_512x512.png" alt="avatar">
+											</a>
+										</div>
+										<div class="sidebar-users__item-data">
+											<div class="sidebar-users__item-name" data-uinfo-lbox="1" data-toggle="popover" data-placement="top">
+												<a href="https://yareny.com/admin" class="block-link" data-spa="true">
+													<span class="user-name-holder">
+														<span class="user-name-holder__name">
+															Yareny Admin														</span>
+
+																													<span class="user-name-holder__badge">
+																<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>															</span>
+																											</span>
+												</a>
+											</div>
+											<div class="sidebar-users__item-followers">
+												<span>233</span> followers											</div>
+										</div>
+									</div>
+																	<div class="sidebar-users__item">
+										<div class="sidebar-users__item-avatar">
+											<a href="https://yareny.com/daboom" class="block-link" data-spa="true">
+												<img src="https://yareny.com/upload/avatars/2023/03/nPJuXGG5oLtkvfQf9jXW_04_f00a1c2630d3c291eca912878a3b5368_thumbnail_512x512.png" alt="avatar">
+											</a>
+										</div>
+										<div class="sidebar-users__item-data">
+											<div class="sidebar-users__item-name" data-uinfo-lbox="6" data-toggle="popover" data-placement="top">
+												<a href="https://yareny.com/daboom" class="block-link" data-spa="true">
+													<span class="user-name-holder">
+														<span class="user-name-holder__name">
+															daboom 														</span>
+
+																											</span>
+												</a>
+											</div>
+											<div class="sidebar-users__item-followers">
+												<span>205</span> followers											</div>
+										</div>
+									</div>
+																	<div class="sidebar-users__item">
+										<div class="sidebar-users__item-avatar">
+											<a href="https://yareny.com/Qurwayoo" class="block-link" data-spa="true">
+												<img src="https://yareny.com/upload/avatars/2023/03/aGOHfd29p7poq1UO4oTu_09_62a826fcd8aa2fb5b36fdf44adaf8742_thumbnail_512x512.jpg" alt="avatar">
+											</a>
+										</div>
+										<div class="sidebar-users__item-data">
+											<div class="sidebar-users__item-name" data-uinfo-lbox="21" data-toggle="popover" data-placement="top">
+												<a href="https://yareny.com/Qurwayoo" class="block-link" data-spa="true">
+													<span class="user-name-holder">
+														<span class="user-name-holder__name">
+															Attila Mueller														</span>
+
+																											</span>
+												</a>
+											</div>
+											<div class="sidebar-users__item-followers">
+												<span>200</span> followers											</div>
+										</div>
+									</div>
+																	<div class="sidebar-users__item">
+										<div class="sidebar-users__item-avatar">
+											<a href="https://yareny.com/cemalatila" class="block-link" data-spa="true">
+												<img src="https://yareny.com/upload/avatars/2023/04/iqVPt3dlxA22Dx88kPz8_04_5d5ace5e650a1b53d95926f9345b426c_thumbnail_512x512.jpg" alt="avatar">
+											</a>
+										</div>
+										<div class="sidebar-users__item-data">
+											<div class="sidebar-users__item-name" data-uinfo-lbox="86" data-toggle="popover" data-placement="top">
+												<a href="https://yareny.com/cemalatila" class="block-link" data-spa="true">
+													<span class="user-name-holder">
+														<span class="user-name-holder__name">
+															Cemal Atila														</span>
+
+																													<span class="user-name-holder__badge">
+																<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>															</span>
+																											</span>
+												</a>
+											</div>
+											<div class="sidebar-users__item-followers">
+												<span>198</span> followers											</div>
+										</div>
+									</div>
+																	<div class="sidebar-users__item">
+										<div class="sidebar-users__item-avatar">
+											<a href="https://yareny.com/Mayoclinic" class="block-link" data-spa="true">
+												<img src="https://yareny.com/upload/avatars/2023/03/t8zt4sOJqTRAjsIrtodC_09_05f161f44a0fac623b05b0415fd996bb_thumbnail_512x512.jpg" alt="avatar">
+											</a>
+										</div>
+										<div class="sidebar-users__item-data">
+											<div class="sidebar-users__item-name" data-uinfo-lbox="20" data-toggle="popover" data-placement="top">
+												<a href="https://yareny.com/Mayoclinic" class="block-link" data-spa="true">
+													<span class="user-name-holder">
+														<span class="user-name-holder__name">
+															Mayoclinic 														</span>
+
+																											</span>
+												</a>
+											</div>
+											<div class="sidebar-users__item-followers">
+												<span>194</span> followers											</div>
+										</div>
+									</div>
+															</div>
+											</div>
+											<div class="sidebar-content__footer">
+							<a href="https://yareny.com/suggested" data-spa="true">
+								Show more							</a>
+						</div>
+									</div>
+				<div class="sidebar-content sidebar-content_hashtags">
+					<div class="sidebar-content__header">
+						Hot topics for you					</div>
+					<div class="sidebar-content__body">
+													<div class="sidebar-hashtags">
+																	<div class="sidebar-hashtags__item" title="Posts 179">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=lucky88" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												lucky88											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 179">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=nhacailucky88" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												nhacailucky88											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 179">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=cacuocbongdalucky88" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												cacuocbongdalucky88											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=dienmaydanggia" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												dienmaydanggia											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=tuchongam" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												tuchongam											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=giuongspa" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												giuongspa											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 5">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=vps" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												vps											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 4">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=40k" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												40k											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=guihangditrungquoc" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												guihangditrungquoc											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=china" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												china											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=guihangdimy" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												guihangdimy											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 3">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=motor" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												motor											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 1">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=motorrung" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												motorrung											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 2">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=BảngGiá2025" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												BảngGiá2025											</span>
+										</a>
+									</div>
+																	<div class="sidebar-hashtags__item" title="Posts 2">
+										<a class="sidebar-hashtags__item-data" href="https://yareny.com/search/posts?q=SảnPhẩmChấtLượng" data-spa="true">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M20,10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4H20z M14,14h-4v-4h4V14z"/></g></svg>											</span>
+											<span class="text">
+												SảnPhẩmChấtLượng											</span>
+										</a>
+									</div>
+															</div>
+											</div>
+											<div class="sidebar-content__footer">
+							<a href="https://yareny.com/trending" data-spa="true">
+								Show more							</a>
+						</div>
+									</div>
+			</div>
+			<div class="right-sidebar__footer">
+				<div class="main-footer">
+	<ul class="footer-nav">
+					<li class="footer-nav-item">
+				<a href="https://yareny.com/search">
+					Explore				</a>
+			</li>
+		
+		
+		<li class="footer-nav-item">
+			<a href="https://yareny.com/terms_of_use" data-spa="true">
+				Terms of Use			</a>
+		</li>
+		<li class="footer-nav-item">
+			<a href="https://yareny.com/privacy_policy" data-spa="true">
+				Privacy policy			</a>
+		</li>
+		<li class="footer-nav-item">
+			<a href="https://yareny.com/cookies_policy" data-spa="true">
+				Cookies			</a>
+		</li>
+		<li class="footer-nav-item">
+			<a href="https://yareny.com/about_us" data-spa="true">
+				About us			</a>
+		</li>
+					<li class="footer-nav-item">
+				<a href="https://yareny.com/api_docs">
+					API
+				</a>
+			</li>
+				<li class="footer-nav-item">
+			<a href="https://yareny.com/faqs" data-spa="true">
+				Help center			</a>
+		</li>
+
+					<li class="footer-nav-item dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					English				</a>
+				<div class="dropdown-menu dropdown-icons">
+											<a class="dropdown-item active" href="https://yareny.com/language/english">
+							English						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/french">
+							French						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/german">
+							German						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/italian">
+							Italian						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/russian">
+							Russian						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/portuguese">
+							Portuguese						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/spanish">
+							Spanish						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/turkish">
+							Turkish						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/dutch">
+							Dutch						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/ukraine">
+							Ukraine						</a>
+											<a class="dropdown-item " href="https://yareny.com/language/arabic">
+							Arabic - العربية						</a>
+									</div>
+			</li>
+		
+		<li class="footer-nav-item">
+			<a href="https://yareny.com/about_us">&copy; Yareny - 2025.</a>
+		</li>
+	</ul>
+
+	</div>			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	new Vue({
+		el: "#vue-main-search-app",
+		data: {
+			searching: false,
+			search_query: "",
+			advanced_search: false,
+			search_result: false
+		},
+		computed: {
+			search_page_url: function() {
+				if (this.search_query.length > 2) {
+					var search_htags_url = "https://yareny.com/search/htags?q={0}";
+					var search_users_url = "https://yareny.com/search/people?q={0}";
+					this.advanced_search = true;
+
+					if (this.search_query.charAt(0) == '#') {
+						return search_htags_url.format(this.search_query.replace('#',''));
+					}
+					else {
+						return search_users_url.format(this.search_query);
+					}
+				}
+				else {
+
+					this.advanced_search = false;
+
+					return "javascript:void(0);";
+				}
+			},
+			query_type: function() {
+				if (this.search_query.charAt(0) == '#') {
+					return 'htags';
+				}
+
+				else {
+					return 'users';
+				}
+			}
+		},
+		methods: {
+			search_onsubmit: function(e = false) {
+				e.preventDefault();
+
+				this.search();
+			},
+			search: function() {
+				if (this.search_query.length > 2) {
+					var _app_ = this;
+					delay(function() {
+						$.ajax({
+							url: 'https://yareny.com/native_api/main/search',
+							type: 'GET',
+							dataType: 'json',
+							data: {
+								query: _app_.search_query.replace('#',''),
+								type: _app_.query_type
+							},
+							beforeSend: function() {
+								_app_.searching = true;
+							}
+						}).done(function(data) {
+							if (data.status == 200) {
+								_app_.search_result = true;
+								$(_app_.$el).find('[data-an="result"]').html($(data.html));
+							}
+							else {
+								$(_app_.$el).find('[data-an="result"]').empty('');
+								_app_.search_result = false;
+							}
+						}).always(function() {
+							_app_.searching = false;
+						});
+					}, 800);
+				}
+			},
+			cancel: function() {
+				var _app_             = this;
+				_app_.searching       = false;
+				_app_.search_query    = "";
+				_app_.advanced_search = false;
+				_app_.search_result   = false;
+				
+				$(_app_.$el).find('[data-an="result"]').empty('');
+			}
+		}
+	});
+</script>									</div>
+					</main>
+
+		
+		<input id="csrf-token" type="hidden" class="hidden d-none" value="1735934814:65385e550698e44f70e9a52512bbfd50ace46861">
+
+				<div data-app="black-hole"></div>
+					<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72425608-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-72425608-1');
+</script>
+		
+					<script>
+	/* @*************************************************************************@
+	// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+	// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+	// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+	// @ Author E-mail: vayart.help@gmail.com                                    @
+	// @*************************************************************************@
+	// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+	// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+	// @*************************************************************************@
+	*/
+
+	"use strict";
+
+	(function(window) {
+		function _SMColibri() {
+			var data = {
+				url: "https://yareny.com"
+			};
+
+			var _smc = Object({
+				curr_pn: "stat_pages",
+				curr_url: "https://yareny.com/terms_of_use",
+				PS: Object({}),
+				vue: Object({}),
+				is_logged_user: '0',
+				back_url: data.url,
+				timeout: false,
+				msb_upinterval: "30",
+				userlbox: {
+					interv: 0,
+					status: false,
+					lifetm: 1000,
+					curr_id: false,
+					curr_el: false,
+					pre_delay: false
+				}
+			});
+
+			if (_smc.curr_pn != "conversation") {
+				if ($(window).width() > 1024) {
+					_smc.lsb = new StickySidebar('[data-app="left-sidebar"]', {
+						topSpacing: 0,
+						bottomSpacing: 0
+					});
+
+					_smc.rsb = new StickySidebar('[data-app="right-sidebar"]', {
+						topSpacing: 0,
+						bottomSpacing: 0
+					});
+				}
+			}
+
+			_smc.toggleSB = function(a = false) {
+				var left_sidebar = $('[data-app="left-sidebar"]');
+
+				if (a) {
+					if (a == "show") {
+						left_sidebar.addClass('show');
+
+						$('body').addClass("mobile-sb-open").append($('<div>', {
+							'class': 'sb-open-overlay',
+							'data-app': 'lsb-back-drop'
+						}));
+					}
+					else{
+						left_sidebar.removeClass('show').promise().done(function() {
+							$('body').removeClass("mobile-sb-open").find('div[data-app="lsb-back-drop"]').remove();
+						});
+					}
+				}
+
+				else{
+					if (left_sidebar.hasClass("show")) {
+						left_sidebar.removeClass('show').promise().done(function() {
+							$('body').removeClass("mobile-sb-open").find('div[data-app="lsb-back-drop"]').remove();
+						});
+					}
+					else{
+						left_sidebar.addClass('show');
+
+						$('body').addClass("mobile-sb-open").append($('<div>', {
+							'class': 'sb-open-overlay',
+							'data-app': 'lsb-back-drop'
+						}));
+					}
+				}
+			}
+
+			_smc.toggleSBMenu = function(e = false) {
+				var left_sidebar = $('[data-app="left-sidebar"]');
+
+				left_sidebar.find("div.sidebar__nav-group_collapse").slideToggle(100);
+				
+
+				if (left_sidebar.find("div.sidebar__nav-group_collapse").hasClass("open")) {
+					$(e).find("a").text("More");
+					left_sidebar.find("div.sidebar__nav-group_collapse").removeClass("open");
+				}
+				else{
+					$(e).find("a").text("Less");
+					left_sidebar.find("div.sidebar__nav-group_collapse").addClass("open");
+				}
+			}
+
+			_smc.init = function() {
+				_smc.fix_sidebars();
+				_smc.update_msb_indicators();
+				_smc.update_ilb();	
+
+				if (cl_empty(window.history.state)) {
+					window.history.pushState({state: "new", back_url: window.location.href}, "", window.location.href);
+				}
+			}
+
+			_smc.fix_sidebars = function() {
+				if (_smc.curr_pn != "chat") {
+					if ($(window).width() > 1024) {
+						if (_smc.lsb) {
+							_smc.lsb.updateSticky();
+						}
+						
+						if (_smc.rsb) {
+							_smc.rsb.updateSticky();
+						}
+					}
+				}
+			}
+			
+			_smc.get_cookie = function(name = "") {
+			    var matches = document.cookie.match(new RegExp(
+			      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+			    ));
+
+			    return (matches ? decodeURIComponent(matches[1]) : undefined);
+			}
+
+			_smc.is_logged = function(){
+				if (_smc.is_logged_user == '1') {
+					return true;
+				}
+
+				return false;
+			}
+
+			_smc.user_lbox = function(id = false, el = false) {
+				if ($.isNumeric(id)) {
+					if(cl_empty(_smc.userlbox.curr_id) != true && _smc.userlbox.curr_id == id) {
+						return false;
+					}
+
+					else{
+
+						if (_smc.userlbox.pre_delay !== false) {
+							clearTimeout(_smc.userlbox.pre_delay);
+
+							_smc.userlbox.pre_delay = false;
+						}
+
+						_smc.userlbox.pre_delay = setTimeout(function() {
+							$.ajax({
+								url: 'https://yareny.com/native_api/main/user_lbox',
+								type: 'GET',
+								dataType: 'json',
+								data: {id: id},
+								beforeSend: function() {
+									_smc.user_lbox_rm();
+
+									_smc.userlbox.curr_id = id;
+									_smc.userlbox.curr_el = el;
+								}
+							}).done(function(data) {
+								if (data.status == 200) {
+									if (_smc.userlbox.curr_id) {
+										_smc.userlbox.status = true;
+										_smc.userlbox.lifetm = 1000;
+
+										el.popover({
+											html: true,
+											content: data.html,
+											placement: "auto"
+										});
+
+										el.popover("show");
+									}
+								}
+								else {
+									_smc.errorMSG();
+								}
+							});
+						}, 1500);
+					}
+				}
+			}
+
+			_smc.display_settings = function(a = "show") {
+				$('[data-app="display-settings-app"]').modal(a);
+			}
+
+			_smc.user_lbox_rm = function() {
+
+				if (_smc.userlbox.curr_el) {
+					_smc.userlbox.curr_el.popover("dispose");
+				}
+
+				else {
+					if ($("[data-app='user-info-lbox']").length) {
+						$("div.popover").each(function(index, el) {
+							$(el).popover("dispose");
+						});
+					}
+				}
+				
+				_smc.userlbox.curr_id = false;
+				_smc.userlbox.status  = false;
+				_smc.userlbox.curr_el = false;
+			}
+
+			_smc.max_upload = function(size = 0) {
+				var max_upload_size = "2097152";
+				
+				if (size > max_upload_size) {
+					cl_bs_notify("The file you selected ({0}) exceeds the maximum file size limit ({1})".format(cl_format_bytes(size), cl_format_bytes(max_upload_size)), 5000, "danger");
+					
+					return false;
+				}
+
+				else {
+					return true;
+				}
+			}
+
+			_smc.post_privacy = function(priv = "everyone", id = false) {
+				if ($.isNumeric(id)) {
+					$.ajax({
+						url: 'https://yareny.com/native_api/main/post_privacy',
+						type: 'POST',
+						dataType: 'json',
+						data: {id: id, priv: priv},
+						beforeSend: function() {
+							_smc.progress_bar("show");
+						}
+					}).done(function(data) {
+						if (data.status == 200) {
+							_smc.spa_reload();
+						}
+						else {
+							_smc.errorMSG();
+						}
+					}).always(function() {
+						setTimeout(function() {
+							_smc.progress_bar("end");
+						}, 1500);
+					});
+				}
+
+				else {
+					return false;
+				}
+			}
+
+			_smc.confirm_action = function(data = {}) {
+				var modal    = "<div class='modal fadeIn confirm-actions-modal vh-center' tabindex='-1' data-onclose='remove' role='dialog' aria-hidden='true' data-keyboard='false' data-backdrop='static'><div class='modal-dialog modal-md' role='document'><div class='modal-content'><div class='modal-body'><h4>{0}</h4><p>{1}</p></div><div class='modal-footer'><button id='confirm-actions-confirm' type='button' class='btn btn-custom main-inline md btn-block'>{3}</button><button id='confirm-actions-cancel' type='button' class='btn btn-custom main-outline md btn-block'>{2}</button></div></div></div></div>";
+				var title    = data['title'];
+				var message  = data['message'];
+				var btn_1    = data['btn_1'];
+				var btn_2    = data['btn_2'];
+				var modal    = modal.format(title,message,btn_1,btn_2);
+				var deferred = new $.Deferred();
+
+				_smc.user_lbox_rm();
+
+				$(document).on('click', '#confirm-actions-confirm', function(event) {
+					$(this).attr("disabled", true).text("Please wait");
+					deferred.resolve();
+				});
+
+				$(document).on('click', '#confirm-actions-cancel', function(event) {
+					deferred.reject();
+				});
+
+				$('div[data-app="black-hole"]').append($(modal)).find('div.confirm-actions-modal').modal('show');
+
+				return deferred.promise();
+			}
+
+			_smc.req_auth = function() {
+				var modal = "<div class='modal fadeIn info-popup-modal' tabindex='-1' data-onclose='remove' role='dialog' aria-hidden='true' data-keyboard='false' data-backdrop='static'><div class='modal-dialog modal-md' role='document'><div class='modal-content'><div class='modal-body'><h4>This action requires authorization!</h4><p>Please log in to your account in order to perform this action, or register if you do not already have an account on -<b >Yareny</b></p></div><div class='modal-footer'><button data-dismiss='modal' type='button' class='btn btn-block btn-custom main-inline lg'>Okey!</button></div></div></div></div>";
+
+				$('div[data-app="black-hole"]').append($(modal)).find('div.info-popup-modal').modal('show');
+			}
+
+			_smc.info = function(title = "", body = "") {
+				var modal = "<div class='modal fadeIn info-popup-modal' tabindex='-1' data-onclose='remove' role='dialog' aria-hidden='true' data-keyboard='false' data-backdrop='static'><div class='modal-dialog modal-md' role='document'><div class='modal-content'><div class='modal-body'><h4>{0}</h4><p>{1}</p></div><div class='modal-footer'><button data-dismiss='modal' type='button' class='btn btn-block btn-custom main-inline md btn-block'>Okey!</button></div></div></div></div>";
+				var modal = modal.format(title, body);
+				
+				$('div[data-app="black-hole"]').append($(modal)).find('div.info-popup-modal').modal('show');
+			}
+
+			_smc.vote_poll = function(id = false, index = false) {
+				if (_smc.is_logged()) {
+					if ($.isNumeric(id) && $.isNumeric(index)) {
+						var post_poll = $('[data-post-poll="{0}"]'.format(id));
+
+						if (post_poll.length && post_poll.data("status") != 1) {
+							post_poll.data("status", 1);
+
+							$.ajax({
+								url: 'https://yareny.com/native_api/main/vote_poll',
+								type: 'POST',
+								dataType: 'json',
+								data: {
+									id: id,
+									option: index
+								}
+							}).done(function(data) {
+								if (data.status == 200) {
+									for (var i = 0; i < data.poll.options.length; i++) {
+										var poll_option = post_poll.find('[data-poll-option="{0}"]'.format(i));
+										var data_option = data.poll.options[i];
+
+										if (poll_option && poll_option.length) {
+											if (data_option.active != undefined) {
+												poll_option.addClass("active");
+											}
+
+											poll_option.find('b').text("{0}%".format(data_option.percentage));
+											poll_option.find('span').css("width", "{0}%".format(data_option.percentage));
+										}
+									}
+								}
+								else {
+									_smc.errorMSG();
+								}
+							});
+						}
+						else {
+							return false;
+						}
+					}
+				}
+
+				else {
+					_smc.req_auth();
+				}
+			}
+
+			_smc.pub_reply = function(id = false) {
+				if (_smc.is_logged()) {
+					if ($.isNumeric(id) && id) {
+						_smc.vue.pubbox2.post_privacy = false;
+						_smc.vue.pubbox2.thread_id    = id;
+
+						$("div#add_new_post").modal('show');
+					}
+				}
+				else {
+					_smc.req_auth();
+				}
+			}
+
+			_smc.show_post = function(id = false, type = false) {
+				if ($.isNumeric(id) && id) {
+					if (type == "blocked") {
+						var promise = SMColibri.confirm_action({
+							btn_1: "Cancel",
+							btn_2: "View",
+							title: "Please confirm your actions!",
+							message: "Are you sure you want to see the content of this post? Please note that the owner of the post is on your blacklist."
+						});
+			        }
+			        else if(type == "reported") {
+			        	var promise = SMColibri.confirm_action({
+							btn_1: "Cancel",
+							btn_2: "View",
+							title: "Please confirm your actions!",
+							message: "This post has been hidden from you due to your complaint, as it may contain inappropriate content for you. Are you sure you want to see the content of this post?"
+						});
+			        }
+
+			        promise.done(function() {
+						$('[data-softhidden-post="{0}"]'.format(id)).remove();
+						$("div.confirm-actions-modal").modal("hide");
+					});
+
+					promise.fail(function() {
+			            $("div.confirm-actions-modal").modal("hide");
+			        });
+				}
+			}
+
+			_smc.delete_post = function(id = false) {
+				if ($.isNumeric(id) && id) {
+					if (_smc.is_logged()) {
+			        	var promise = SMColibri.confirm_action({
+							btn_1: "Cancel",
+							btn_2: "Delete",
+							title: "Please confirm your actions!",
+							message: "Please note that if you delete this post, then with the removal of this post all posts related to this thread will also be permanently deleted!"
+						});
+
+						promise.done(function() {
+							$.ajax({
+								url: 'https://yareny.com/native_api/main/delete_post',
+								type: 'POST',
+								dataType: 'json',
+								data: {id: id},
+							}).done(function(data) {
+								if (data.status != 200) {
+									_smc.errorMSG();
+								}
+								else {
+									if (_smc.curr_pn == 'home') {
+										var hp_tl_app = $('div[data-app="homepage"]');
+
+										hp_tl_app.find('div[data-an="entry-list"]').find('div[data-list-item="{0}"]'.format(id)).slideUp(200, function() {
+											$(this).remove();
+
+											if (hp_tl_app.find('div[data-an="entry-list"]').find('div[data-list-item]').length < 1) {
+												$(window).reloadPage(50);
+											}
+										});
+									}
+									else if (_smc.curr_pn == 'profile') {
+										var profile_app = $('div[data-app="profile"]');
+
+										profile_app.find('div[data-an="entry-list"]').find('div[data-list-item="{0}"]'.format(id)).slideUp(200, function() {
+											$(this).remove();
+
+											if (profile_app.find('div[data-an="entry-list"]').find('div[data-list-item]').length < 1) {
+												$(window).reloadPage(50);
+											}
+										});
+									}
+									else if(_smc.curr_pn == 'bookmarks') {
+										var bookmarks_app = $('div[data-app="bookmarks"]');
+
+										bookmarks_app.find('div[data-an="entry-list"]').find('div[data-list-item="{0}"]'.format(id)).slideUp(200, function() {
+											$(this).remove();
+
+											if (bookmarks_app.find('div[data-an="entry-list"]').find('div[data-list-item]').length < 1) {
+												$(window).reloadPage(50);
+											}
+										});
+									}
+									else if(_smc.curr_pn == 'explore') {
+										var search_app = $('div[data-app="explore"]');
+
+										search_app.find('div[data-an="entry-list"]').find('div[data-list-item="{0}"]'.format(id)).slideUp(200, function() {
+											$(this).remove();
+										});
+									}
+									else {
+										cl_redirect(data.url);
+									}
+								}
+							}).always(function() {
+								$("div.confirm-actions-modal").modal("hide");
+							});
+				        });
+
+						promise.fail(function() {
+				            $("div.confirm-actions-modal").modal("hide");
+				        });
+					}
+					else{
+						_smc.req_auth();
+					}
+				}
+			}
+
+			_smc.delete_account = function(id = false) {
+				if ($.isNumeric(id) && id) {
+					if (_smc.is_logged()) {
+			        	var promise = SMColibri.confirm_action({
+							btn_1: "Cancel",
+							btn_2: "Delete account",
+							title: "Please confirm your actions!",
+							message: "Please note that if you delete this user, then all posts, replies, and all other data associated with this user will also be deleted!"
+						});
+
+						promise.done(function() {
+							$.ajax({
+								url: 'https://yareny.com/native_api/cpanel/delete_user',
+								type: 'POST',
+								dataType: 'json',
+								data: {id: id},
+							}).done(function(data) {
+								if (data.status != 200) {
+									_smc.errorMSG();
+								}
+								else {
+									_smc.go_back();
+								}
+							}).always(function() {
+								$("div.confirm-actions-modal").modal("hide");
+							});
+				        });
+
+						promise.fail(function() {
+				            $("div.confirm-actions-modal").modal("hide");
+				        });
+					}
+					else{
+						_smc.req_auth();
+					}
+				}
+			}
+
+			_smc.suspend_account = function(id = false) {
+				if ($.isNumeric(id) && id) {
+					if (_smc.is_logged()) {
+			        	var promise = SMColibri.confirm_action({
+							btn_1: "Cancel",
+							btn_2: "Suspend account",
+							title: "Please confirm your actions!",
+							message: "Please note that if you delete this user, then all posts, replies, and all other data associated with this user will also be deleted!"
+						});
+
+						promise.done(function() {
+							$.ajax({
+								url: 'https://yareny.com/native_api/cpanel/toggle_user_status',
+								type: 'POST',
+								dataType: 'json',
+								data: {id: id},
+							}).done(function(data) {
+								if (data.status != 200) {
+									_smc.errorMSG();
+								}
+								else {
+									_smc.spa_reload();
+								}
+							}).always(function() {
+								$("div.confirm-actions-modal").modal("hide");
+							});
+				        });
+
+						promise.fail(function() {
+				            $("div.confirm-actions-modal").modal("hide");
+				        });
+					}
+					else{
+						_smc.req_auth();
+					}
+				}
+			}
+
+			_smc.unsuspend_account = function(id = false) {
+				if ($.isNumeric(id) && id) {
+					$.ajax({
+						url: 'https://yareny.com/native_api/cpanel/toggle_user_status',
+						type: 'POST',
+						dataType: 'json',
+						data: {id: id},
+						beforeSend: function() {
+							_smc.progress_bar("start");
+						}
+					}).done(function(data) {
+						if (data.status != 200) {
+							_smc.errorMSG();
+						}
+						else {
+							_smc.spa_reload();
+						}
+					}).always(function() {
+						_smc.progress_bar("end");
+					});
+				}
+			}
+
+			_smc.logout = function() {
+				var promise = SMColibri.confirm_action({
+					btn_1: "Cancel",
+					btn_2: "Logout",
+					title: "Leaving already?",
+					message: "Are you sure that you want to log out from your account?"
+				});
+
+				promise.done(function() {
+					cl_redirect("https://yareny.com/logout");
+		        });
+
+				promise.fail(function() {
+		            $("div.confirm-actions-modal").modal("hide");
+		        });
+			}
+
+			_smc.like_post = function(id = false, event = false) {
+				if (_smc.is_logged()) {
+					if ($.isNumeric(id) && id) {
+						$(event).attr('disabled', 'true');
+
+						$.ajax({
+							url: 'https://yareny.com/native_api/main/like_post',
+							type: 'POST',
+							dataType: 'json',
+							data: {id: id},
+						}).done(function(data) {
+							if (data.status == 200) {
+								if ($(event).hasClass('liked')) {
+									$(event).removeClass('liked');
+
+									$(event).removeClass('liked').addClass('animated bounceIn').promise().done(function(){
+										delay(function() {
+											$(event).removeClass('animated bounceIn');
+										}, 1000);
+									});
+
+									$(event).find('span[data-an="likes-count"]').text(data.likes_count);
+								}
+								else {
+									$(event).addClass('liked').addClass('animated bounceIn').promise().done(function(){
+										delay(function() {
+											$(event).removeClass('animated bounceIn');
+										}, 1000);
+									});
+
+									$(event).find('span[data-an="likes-count"]').text(data.likes_count);
+								}
+							}
+							else {
+								_smc.errorMSG();
+							}
+
+						}).always(function() {
+							$(event).removeAttr('disabled');
+						});
+					}
+				}
+				else{
+					_smc.req_auth();
+				}
+			}
+
+			_smc.repost = function(id = false, event = false) {
+				if (_smc.is_logged()) {
+					if ($.isNumeric(id) && id) {
+						$(event).attr('disabled', 'true');
+
+						$.ajax({
+							url: 'https://yareny.com/native_api/main/repost',
+							type: 'POST',
+							dataType: 'json',
+							data: {id: id},
+						}).done(function(data) {
+							if (data.status == 200) {
+								if ($(event).hasClass('reposted')) {
+									$(event).removeClass('reposted');
+
+									$(event).removeClass('reposted').addClass('animated bounceIn').promise().done(function(){
+										delay(function() {
+											$(event).removeClass('animated bounceIn');
+										}, 1000);
+									});
+
+									$(event).find('span[data-an="reposts-count"]').text(data.reposts_count);
+
+									if (_smc.curr_pn == 'home' || _smc.curr_pn == 'profile') {
+
+										var timeline_app = ((_smc.curr_pn == 'home') ? $('div[data-app="homepage"]') : $('div[data-app="profile"]'));
+										var orig_post    = timeline_app.find('div[data-an="entry-list"]').find('[data-list-item="{0}"]'.format(id));
+										var repost       = timeline_app.find('div[data-an="entry-list"]').find('[data-repost="{0}"]'.format(data.repost_id));
+
+										if (repost.length) {
+											repost.slideUp(200, function() {
+												$(this).remove();
+											});
+										}
+
+										if (orig_post.length) {
+											orig_post.find('button[data-an="repost-ctrl"]').removeClass('reposted');
+											orig_post.find('span[data-an="reposts-count"]').text(data.reposts_count);
+											orig_post.find('span[data-an="reposts-count"]').addClass('animated bounceIn').promise().done(function(){
+												delay(function() {
+													$(event).removeClass('animated bounceIn');
+												}, 1000);
+											});
+										}
+									}
+								}
+								else {
+									$(event).addClass('reposted').addClass('animated bounceIn').promise().done(function(){
+										delay(function() {
+											$(event).removeClass('animated bounceIn');
+										}, 1000);
+									});
+
+									$(event).find('span[data-an="reposts-count"]').text(data.reposts_count);
+								}
+							}
+							else {
+								_smc.errorMSG();
+							}
+						}).always(function() {
+							$(event).removeAttr('disabled');
+						});
+					}
+				}
+				else{
+					_smc.req_auth();
+				}
+			}
+
+			_smc.share_post = function(url = false, encoded_url = false) {
+				if (url && encoded_url) {
+					var modal = "<div class='modal fadeIn share-post-modal' data-an='share-post' tabindex='-1' data-onclose='remove' role='dialog' aria-hidden='true' data-keyboard='false' data-backdrop='static'><div class='modal-dialog modal-md' role='document'><div class='modal-content'><div class='modal-header'><div class='modal-header__inner'><h5 class='modal-title'>Share post</h5><span class='dismiss-modal' data-dismiss='modal'><svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#000000'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z'/></svg></span></div></div><div class='modal-body'><div class='social-media-links'><a href='https://twitter.com/intent/tweet?url={0}' target='_blank' class='link-item twitter'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z'/></svg></a><a href='https://www.facebook.com/sharer.php?u={0}' target='_blank' class='link-item facebook'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z'/></svg></a><a href='https://www.linkedin.com/shareArticle?mini=true&url={0}' target='_blank' class='link-item linkedin'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z'/></svg></a><a href='https://www.pinterest.ru/pin/create/button/?url={0}' target='_blank' class='link-item pinterest'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 32C132.3 32 32 132.3 32 256c0 91.7 55.2 170.5 134.1 205.2-.6-15.6-.1-34.4 3.9-51.4 4.3-18.2 28.8-122.1 28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2 19.2-58 43.2-58 20.4 0 30.2 15.3 30.2 33.6 0 20.5-13.1 51.1-19.8 79.5-5.6 23.8 11.9 43.1 35.4 43.1 42.4 0 71-54.5 71-119.1 0-49.1-33.1-85.8-93.2-85.8-67.9 0-110.3 50.7-110.3 107.3 0 19.5 5.8 33.3 14.8 43.9 4.1 4.9 4.7 6.9 3.2 12.5-1.1 4.1-3.5 14-4.6 18-1.5 5.7-6.1 7.7-11.2 5.6-31.3-12.8-45.9-47-45.9-85.6 0-63.6 53.7-139.9 160.1-139.9 85.5 0 141.8 61.9 141.8 128.3 0 87.9-48.9 153.5-120.9 153.5-24.2 0-46.9-13.1-54.7-27.9 0 0-13 51.6-15.8 61.6-4.7 17.3-14 34.5-22.5 48 20.1 5.9 41.4 9.2 63.5 9.2 123.7 0 224-100.3 224-224C480 132.3 379.7 32 256 32z'/></svg></a><a href='https://www.reddit.com/submit?url={0}' target='_blank' class='link-item reddit'><svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Logo Reddit</title><path d='M324 256a36 36 0 1036 36 36 36 0 00-36-36z'/><circle cx='188' cy='292' r='36' transform='rotate(-22.5 187.997 291.992)'/><path d='M496 253.77c0-31.19-25.14-56.56-56-56.56a55.72 55.72 0 00-35.61 12.86c-35-23.77-80.78-38.32-129.65-41.27l22-79 66.41 13.2c1.9 26.48 24 47.49 50.65 47.49 28 0 50.78-23 50.78-51.21S441 48 413 48c-19.53 0-36.31 11.19-44.85 28.77l-90-17.89-31.1 109.52-4.63.13c-50.63 2.21-98.34 16.93-134.77 41.53A55.38 55.38 0 0072 197.21c-30.89 0-56 25.37-56 56.56a56.43 56.43 0 0028.11 49.06 98.65 98.65 0 00-.89 13.34c.11 39.74 22.49 77 63 105C146.36 448.77 199.51 464 256 464s109.76-15.23 149.83-42.89c40.53-28 62.85-65.27 62.85-105.06a109.32 109.32 0 00-.84-13.3A56.32 56.32 0 00496 253.77zM414 75a24 24 0 11-24 24 24 24 0 0124-24zM42.72 253.77a29.6 29.6 0 0129.42-29.71 29 29 0 0113.62 3.43c-15.5 14.41-26.93 30.41-34.07 47.68a30.23 30.23 0 01-8.97-21.4zM390.82 399c-35.74 24.59-83.6 38.14-134.77 38.14S157 423.61 121.29 399c-33-22.79-51.24-52.26-51.24-83A78.5 78.5 0 0175 288.72c5.68-15.74 16.16-30.48 31.15-43.79a155.17 155.17 0 0114.76-11.53l.3-.21.24-.17c35.72-24.52 83.52-38 134.61-38s98.9 13.51 134.62 38l.23.17.34.25A156.57 156.57 0 01406 244.92c15 13.32 25.48 28.05 31.16 43.81a85.44 85.44 0 014.31 17.67 77.29 77.29 0 01.6 9.65c-.01 30.72-18.21 60.19-51.25 82.95zm69.6-123.92c-7.13-17.28-18.56-33.29-34.07-47.72A29.09 29.09 0 01440 224a29.59 29.59 0 0129.41 29.71 30.07 30.07 0 01-8.99 21.39z'/><path d='M323.23 362.22c-.25.25-25.56 26.07-67.15 26.27-42-.2-66.28-25.23-67.31-26.27a4.14 4.14 0 00-5.83 0l-13.7 13.47a4.15 4.15 0 000 5.89c3.4 3.4 34.7 34.23 86.78 34.45 51.94-.22 83.38-31.05 86.78-34.45a4.16 4.16 0 000-5.9l-13.71-13.47a4.13 4.13 0 00-5.81 0z'/></svg></a><a href='https://api.whatsapp.com/send?text={0}' target='_blank' class='link-item whatsapp'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M260.062 32C138.605 32 40.134 129.701 40.134 250.232c0 41.23 11.532 79.79 31.559 112.687L32 480l121.764-38.682c31.508 17.285 67.745 27.146 106.298 27.146C381.535 468.464 480 370.749 480 250.232 480 129.701 381.535 32 260.062 32zm109.362 301.11c-5.174 12.827-28.574 24.533-38.899 25.072-10.314.547-10.608 7.994-66.84-16.434-56.225-24.434-90.052-83.844-92.719-87.67-2.669-3.812-21.78-31.047-20.749-58.455 1.038-27.413 16.047-40.346 21.404-45.725 5.351-5.387 11.486-6.352 15.232-6.413 4.428-.072 7.296-.132 10.573-.011 3.274.124 8.192-.685 12.45 10.639 4.256 11.323 14.443 39.153 15.746 41.989 1.302 2.839 2.108 6.126.102 9.771-2.012 3.653-3.042 5.935-5.961 9.083-2.935 3.148-6.174 7.042-8.792 9.449-2.92 2.665-5.97 5.572-2.9 11.269 3.068 5.693 13.653 24.356 29.779 39.736 20.725 19.771 38.598 26.329 44.098 29.317 5.515 3.004 8.806 2.67 12.226-.929 3.404-3.599 14.639-15.746 18.596-21.169 3.955-5.438 7.661-4.373 12.742-2.329 5.078 2.052 32.157 16.556 37.673 19.551 5.51 2.989 9.193 4.529 10.51 6.9 1.317 2.38.901 13.531-4.271 26.359z'/></svg></a><a href='https://telegram.me/share/url?url={0}' target='_blank' class='link-item telegram'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' class='feather' fill='#239bcd'><path d='M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z'></path></svg></a></div><div class='raw-link'><p>Or copy link</p><div class='link-input'><input type='text' readonly='true' value='{1}' id='copy-link-input'><button data-clipboard-target='#copy-link-input' data-clipboard-action='copy' class='clip-board-copy copy-link'><svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#000000'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg></button></div></div></div></div></div></div>";
+					var modal = modal.format(encoded_url,url);
+
+					$('body').find('[data-app="black-hole"]').append($(modal)).promise().done(function() {
+						$('body').find('[data-app="black-hole"]').find('[data-an="share-post"]').modal('show');
+					});
+				}
+			}
+
+			_smc.isURL = function(str = "") {
+				var regex = new RegExp("^(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*(\\?[;&a-z\\d%_.~+=-]*)?(\\#[-a-z\\d_]*)?$", "i"); 
+			  	return regex.test(str);
+			}
+
+			_smc.show_likes = function(id = false) {
+				if ($.isNumeric(id) && id) {
+					$.ajax({
+						url: 'https://yareny.com/native_api/main/show_likes',
+						type: 'POST',
+						dataType: 'json',
+						data: {id: id},
+					}).done(function(data) {
+						if (data.status == 200) {
+							$('div[data-app="black-hole"]').append($(data.html)).find('div[data-app="post-likes-list"]').modal('show');
+						}
+
+						else if(data.status == 404) {
+							_smc.info("No likes yet!", "This post appears to have no likes yet. To like this post, click <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#000000'><path d='M0 0h24v24H0V0z' fill='none'/><circle cx='15.5' cy='9.5' r='1.5'/><circle cx='8.5' cy='9.5' r='1.5'/><path d='M12 16c-1.48 0-2.75-.81-3.45-2H6.88c.8 2.05 2.79 3.5 5.12 3.5s4.32-1.45 5.12-3.5h-1.67c-.7 1.19-1.97 2-3.45 2zm-.01-14C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/></svg> below it.");
+						}
+
+						else {
+							_smc.errorMSG();
+						}
+					});
+				}
+			}
+
+			_smc.edit_post = function(id = false) {
+				if ($.isNumeric(id) && id) {
+					$.ajax({
+						url: 'https://yareny.com/native_api/edit_post/get_data',
+						type: 'GET',
+						dataType: 'json',
+						data: {id: id},
+					}).done(function(data) {
+						if (data.status == 200) {
+							$('div[data-app="black-hole"]').append($(data.html)).find('div[data-app="post-text-edit"]').modal('show');
+						}
+						else {
+							_smc.errorMSG();
+						}
+					});
+				}
+			}
+
+			_smc.bookmark_post = function(id = false, _self = false) {
+				if (_smc.is_logged()) {
+					if ($.isNumeric(id) && id) {
+						$.ajax({
+							url: 'https://yareny.com/native_api/main/bookmark_post',
+							type: 'POST',
+							dataType: 'json',
+							data: {id: id, a: 'save'},
+						}).done(function(data) {
+							if (data.status == 200) {
+								if (data.status_code == '1') {
+									cl_bs_notify("Post has been bookmarked!", 500);
+
+									$(_self).text("Unbookmark");
+								}
+								else {
+									cl_bs_notify("Post has been deleted from bookmarks!",500);
+									$(_self).text("Bookmark");
+								}
+							}
+							else {
+								_smc.errorMSG();
+							}
+						});
+					}
+				}
+				else {
+					_smc.req_auth();
+				}
+			}
+
+			_smc.load_likes = function(id = false, event = false) {
+				if ($.isNumeric(id) && id) {
+					var _self     = $(event);
+					var likes_ls  = $('div[data-app="post-likes-list"]');
+					var last_item = likes_ls.find('div[data-list-item]').last();
+
+					if (last_item.length) {
+						$.ajax({
+							url: 'https://yareny.com/native_api/main/load_likes',
+							type: 'GET',
+							dataType: 'json',
+							data: {id: id, offset: last_item.data('list-item')},
+							beforeSend: function() {
+								_self.attr('disabled', 'true').text("Please wait");
+							}
+						}).done(function(data) {
+							if (data.status == 200) {
+								likes_ls.find('div[data-an="users-ls"]').append($(data.html));
+
+								_self.removeAttr('disabled').text("Show more");
+							}
+							else {
+								_self.text("That is all for now!");
+							}
+						});
+					}
+				}
+			}
+
+			_smc.follow = function(event = false) {
+				if (event) {
+					if (_smc.is_logged()) {
+						var target = $(event);
+
+				        if(target.data('action') == 'unfollow') {
+				        	var promise = SMColibri.confirm_action({
+								btn_1: "Cancel",
+								btn_2: "Unfollow",
+								title: "Please confirm your actions!",
+								message: "Please note that, if you unsubscribe then this user's posts will no longer appear in the feed on your main page.",
+							});
+
+							promise.done(function() {
+					            target.data('action', 'follow');
+
+					            target.text("Follow");
+								target.replaceClass('main-inline','main-outline');
+								
+								$.ajax({
+									url: 'https://yareny.com/native_api/main/follow',
+									type: 'POST',
+									dataType: 'json',
+									data: {id: target.data('id')},
+								}).done(function(data) {
+									if (data.status != 200) {
+										_smc.errorMSG();
+									}
+									else {
+										if (_smc.curr_pn == "profile") { 
+											if (data.refresh != undefined) {
+												$(window).reloadPage(1000);
+											}
+										}
+									}
+								}).always(function() {
+									$("div.confirm-actions-modal").modal("hide");
+								});
+
+								cl_bs_notify("You unfollowed <b>@{0}</b>".format(target.data("user-name")), 1500);
+					        });
+
+							promise.fail(function() {
+					            $("div.confirm-actions-modal").modal("hide");
+					        });
+				        }
+
+				        else {
+				        	target.data('action', 'unfollow');
+							target.text("Following");
+							target.replaceClass('main-outline','main-inline');
+
+							delay(function(){
+								target.text("Unfollow");
+							}, 1500);
+							
+							
+				        	$.ajax({
+								url: 'https://yareny.com/native_api/main/follow',
+								type: 'POST',
+								dataType: 'json',
+								data: {id: target.data('id')},
+							}).done(function(data) {
+								if (data.status != 200) {
+									_smc.errorMSG();
+								}
+								else {
+									if (_smc.curr_pn == "profile") { 
+										if (data.refresh != undefined) {
+											$(window).reloadPage(1000);
+										}
+									}
+								}
+							});
+
+							cl_bs_notify("You followed <b>@{0}</b>".format(target.data("user-name")), 1500);
+				        }
+					}
+					else{
+						_smc.req_auth();
+					}
+				}
+			}
+
+			_smc.req_follow = function(event = false) {
+				if (event) {
+					if (_smc.is_logged()) {
+						var target = $(event);
+
+				        if(target.data('action') == 'unfollow') {
+				        	var promise = SMColibri.confirm_action({
+								btn_1: "Cancel",
+								btn_2: "Unfollow",
+								title: "Please confirm your actions!",
+								message: "Please note that, if you unsubscribe then this user's posts will no longer appear in the feed on your main page.",
+							});
+
+							promise.done(function() {
+					            target.data('action', 'follow');
+								target.text("Follow");
+								target.replaceClass('main-inline','main-outline');
+
+								$.ajax({
+									url: 'https://yareny.com/native_api/main/follow',
+									type: 'POST',
+									dataType: 'json',
+									data: {id: target.data('id')},
+								}).done(function(data) {
+									if (data.status != 200) {
+										_smc.errorMSG();
+									}
+								}).always(function() {
+									$("div.confirm-actions-modal").modal("hide");
+								});
+
+								cl_bs_notify("You unfollowed <b>@{0}</b>".format(target.data("user-name")), 1500);
+					        });
+
+							promise.fail(function() {
+					            $("div.confirm-actions-modal").modal("hide");
+					        });
+				        }
+				        else if(target.data('action') == 'cancel') {
+				        	var promise = SMColibri.confirm_action({
+								btn_1: "Cancel",
+								btn_2: "Cancel request",
+								title: "Please confirm your actions!",
+								message: "This will cancel your pending request and this user will no longer see it.",
+							});
+
+							promise.done(function() {
+					            target.data('action', 'follow');
+								target.text("Follow");
+								target.replaceClass('main-inline','main-outline');
+
+								$.ajax({
+									url: 'https://yareny.com/native_api/main/follow',
+									type: 'POST',
+									dataType: 'json',
+									data: {id: target.data('id')},
+								}).done(function(data) {
+									if (data.status != 200) {
+										_smc.errorMSG();
+									}
+								}).always(function() {
+									$("div.confirm-actions-modal").modal("hide");
+								});
+
+								cl_bs_notify("You unfollowed <b>@{0}</b>".format(target.data("user-name")), 1500);
+					        });
+
+							promise.fail(function() {
+					            $("div.confirm-actions-modal").modal("hide");
+					        });
+				        }
+
+				        else {
+				        	target.data('action', 'cancel');
+			            	target.text("Requested");
+							target.replaceClass('main-outline', 'main-inline');
+
+							delay(function() {
+								target.text("Pending");
+							}, 1500);	
+
+				        	$.ajax({
+								url: 'https://yareny.com/native_api/main/follow',
+								type: 'POST',
+								dataType: 'json',
+								data: {id: target.data('id')},
+							}).done(function(data) {
+								if (data.status != 200) {
+									_smc.errorMSG();
+								}
+							});
+
+							cl_bs_notify("Follow request sent to <b>@{0}</b>".format(target.data("user-name")), 1500);
+				        }
+					}
+					else{
+						_smc.req_auth();
+					}
+				}
+			}
+
+			_smc.block = function(event = false) {
+				if (event) {
+					if (_smc.is_logged()) {
+						var target = $(event);
+
+				        if(target.data('action') == 'block') {
+				        	var promise = SMColibri.confirm_action({
+								btn_1: "Cancel",
+								btn_2: "Block",
+								title: "Please confirm your actions!",
+								message: "Blocked users will no longer be able to write a message to you, follow you, or see your profile and publications, etc.",
+							});
+
+							promise.done(function() {
+					            target.data('action','unblock');
+								target.text("Unblock");
+
+								if (target.hasClass('toggle-class')) {
+									target.replaceClass('main-inline', 'main-outline');
+								}
+	
+								$.ajax({
+									url: 'https://yareny.com/native_api/main/block',
+									type: 'POST',
+									dataType: 'json',
+									data: {id: target.data('id')},
+								}).done(function(data) {
+									if (data.status != 200) {
+										SMColibri.errorMSG();
+									}
+									else {
+										if (_smc.curr_pn == 'profile') {
+											_smc.spa_reload();
+										}
+									}
+								}).always(function() {
+									$("div.confirm-actions-modal").modal("hide");
+								});
+					        });
+
+							promise.fail(function() {
+					            $("div.confirm-actions-modal").modal("hide");
+					        });
+				        }
+
+				        else if(target.data('action') == 'unblock') {
+				        	var promise = SMColibri.confirm_action({
+								btn_1: "Cancel",
+								btn_2: "Unblock",
+								title: "Please confirm your actions!",
+								message: "Are you sure you want to unblock this user? Now they can follow you or see your posts, etc.",
+							});
+
+							promise.done(function() {
+					            target.data('action','block');
+								target.text("Block");
+
+								if (target.hasClass('toggle-class')) {
+									target.replaceClass('main-outline', 'main-inline');
+								}
+	
+								$.ajax({
+									url: 'https://yareny.com/native_api/main/block',
+									type: 'POST',
+									dataType: 'json',
+									data: {id: target.data('id')},
+								}).done(function(data) {
+									if (data.status != 200) {
+										SMColibri.errorMSG();
+									}
+									else {
+										if (_smc.curr_pn == 'profile') {
+											$(window).reloadPage();
+										}
+									}
+								}).always(function() {
+									$("div.confirm-actions-modal").modal("hide");
+								});
+					        });
+
+							promise.fail(function() {
+					            $("div.confirm-actions-modal").modal("hide");
+					        });
+				        }
+					}
+					else{
+						_smc.req_auth();
+					}
+				}
+			}
+
+			_smc.errorMSG = function() {
+				cl_bs_notify("An error occurred while processing your request. Please try again later.", 3000, "danger");
+			}
+
+			_smc.extend_vue = function(app_name = "", vue_instance = {}) {
+				_smc.vue[app_name] = vue_instance;
+			}
+
+			_smc.progress_bar = function(a = "show") {
+				if (a == "show") {
+					window.waitMe.start();
+				}
+
+				else {
+					window.waitMe.end();
+				}
+			}
+
+			_smc.update_msb_indicators = function() {
+				if (_smc.is_logged()) {
+					var main_left_sb   = $('div[data-app="left-sidebar"]');
+					var main_bottom_nb = $('div[data-app="mobile-navbar"]');
+					var timer_id       = setInterval(function() {
+						$.ajax({
+							url: 'https://yareny.com/native_api/main/update_msb_indicators',
+							type: 'GET',
+							dataType: 'json',
+						}).done(function(data) {
+							if (data.status == 200) {
+								if (data.notifications > 0) {
+									var notifs_total = data.notifications;
+
+									if (data.notifications > 99) {
+										notifs_total = "99+";
+									}
+
+									main_left_sb.find('[data-an="group-ind"]').addClass("group-ind-active");
+									main_left_sb.find('[data-an="new-notifs"]').text($.trim(notifs_total));
+									main_bottom_nb.find('[data-an="new-notifs"]').text($.trim(notifs_total));
+								}
+								else {
+									main_left_sb.find('[data-an="group-ind"]').removeClass("group-ind-active");
+									main_left_sb.find('[data-an="new-notifs"]').empty();
+									main_bottom_nb.find('[data-an="new-notifs"]').empty();
+								}
+
+								if (data.messages) {
+
+									var messages_total = data.messages;
+
+									if (data.messages > 99) {
+										messages_total = "99+";
+									}
+
+									main_left_sb.find('[data-an="group-ind"]').addClass("group-ind-active");
+									main_left_sb.find('[data-an="new-messages"]').text($.trim(messages_total));
+									main_bottom_nb.find('[data-an="new-messages"]').text($.trim(messages_total));
+								}
+								else {
+									main_left_sb.find('[data-an="group-ind"]').removeClass("group-ind-active");
+									main_left_sb.find('[data-an="new-messages"]').empty();
+									main_bottom_nb.find('[data-an="new-messages"]').empty();
+								}
+							}
+							else {
+								clearInterval(timer_id);
+							}
+						});
+					}, (Number(_smc.msb_upinterval) * 1000));
+				}
+			}
+
+			_smc.hide_sb = function() {
+				$('div[data-app="lsb-back-drop"]').trigger('click');
+			}
+
+			_smc.spa_load = function(url = "", push_state = true, reload = false) {
+
+				if (_smc.curr_url == url && reload == false) {
+					return false;
+				}
+
+				_smc.curr_url = url;
+
+				var timeline      = $('[data-el="timeline-container-wrapper"]');
+				var preloader     = timeline.find('[data-el="spa-preloader"]');
+				var left_sidebar  = $('[data-app="left-sidebar"]');
+				var mobile_navbar = $('[data-app="mobile-navbar"]');
+
+				if (push_state) {
+					window.history.pushState({state: "new", back_url: url}, "", url);
+				}
+
+				if (window.mobileCheck()) {
+					_smc.hide_sb();
+				}
+
+				$.ajax({
+					url: url,
+					type: 'GET',
+					data: {spa_load: '1'},
+					dataType: 'json',
+					async: true,
+					beforeSend: function() {
+						_smc.user_lbox_rm();
+						
+						preloader.removeClass('d-none');
+
+						_smc.toggleSB("hide");
+
+						$(window).scrollTop(0);
+
+						cl_close_all_modals();
+					}
+				}).done(function(data = {}) {
+					if (data.status == 200) {
+						var prevapp   = _smc.curr_pn;
+						var json_data = data.json_data;
+						_smc.curr_pn  = json_data.pn;
+
+
+						$('head').find('title').text(json_data.page_title);
+
+						if ($('body').hasClass('cl-app-{0}'.format(prevapp))) {
+							$('body').removeClass('cl-app-{0}'.format(prevapp));
+							$('body').addClass('cl-app-{0}'.format(json_data.pn));
+						}
+						else {
+							$('body').addClass('cl-app-{0}'.format(json_data.pn));
+						}
+
+						$('body').attr('data-page-tab', json_data.page_tab);
+		
+
+
+						timeline.find('[data-el="timeline-content"]').html($(data.html));
+
+						left_sidebar.find('[data-navitem]').each(function(index, el) {
+							$(el).removeClass('active');
+						}).promise().done(function() {
+
+							if (_smc.curr_pn == "profile") {
+								if (json_data.page_xdata.is_me) {
+									left_sidebar.find('[data-navitem="profile"]').addClass('active');
+								}
+							}
+							else{
+								left_sidebar.find('[data-navitem="{0}"]'.format(_smc.curr_pn)).addClass('active');
+							}
+						});
+
+						mobile_navbar.find('[data-navitem]').each(function(index, el) {
+							$(el).removeClass('active');
+						}).promise().done(function() {
+							mobile_navbar.find('[data-navitem="{0}"]'.format(_smc.curr_pn)).addClass('active');
+						});
+					}
+					else if(data.status == 302) {
+						_smc.spa_load(data.redirect_url);
+					}
+
+					else {
+						_smc.spa_load("https://yareny.com/404");
+					}
+				}).always(function() {
+					if (_smc.timeout !== false) {
+						clearTimeout(_smc.timeout);
+					}
+
+					_smc.timeout = setTimeout(function() {
+						preloader.addClass('d-none');
+					}, 1000);
+
+					$("div.dropdown-menu.show").each(function(index, el) {
+						$(el).removeClass("show");
+					});
+				});
+			}
+
+			_smc.spa_reload = function() {
+				if (window.location.href != undefined) {
+					_smc.spa_load(window.location.href, false, true);
+				}
+				else {
+					_smc.spa_load(data['url'], false, true);
+				}
+
+				return false;
+			}
+
+			_smc.go_back = function() {
+				history.back();
+			}
+
+			_smc.jump_back = function(step = 1) {
+				history.go(step);
+			}
+
+			_smc.ad_conversion = function(e = false) {
+				if (e) {
+					var _self = $(e);
+					var id    = _self.data('ad-id');
+					var url   = _self.data('ad-url');
+
+					if (_self.data('conversed') == undefined) {
+						$.ajax({
+							url: 'https://yareny.com/native_api/ads/ad_conversion',
+							type: 'POST',
+							dataType: 'json',
+							data: {id: id},
+						});
+
+						_self.data('conversed', 'true');
+					}
+
+					window.open(url, '_blank');
+				}
+			}
+
+			_smc.report_post = function(id = false) {
+				if (_smc.is_logged()) {
+					if (_smc.vue.report_post != undefined && id) {
+	                    _smc.vue.report_post.open(id);
+					}
+					else {
+						_smc.errorMSG();
+					}
+				}
+                else {
+                    _smc.req_auth();
+                }
+			}
+
+			_smc.update_ilb = function() {
+				$("a.fbox-media").fancybox({
+					arrows: true,
+					openEffect: 'elastic',
+	    			closeEffect: false,
+	    			hash: false,
+					i18n: {
+					    en: {
+					    	ERROR: "The requested content could not be loaded. <br/> Please try again later.",
+					    }
+					}
+				});	
+			}
+
+			_smc.post_text_collapse = function(id = false, e = false) {
+				if (id && e) {
+					var _self = $(e);
+
+					if (_self.data("collapse") == "Y") {
+						$('[data-post-text="{0}"]'.format(id)).removeClass("publication-text_collapsed");
+
+						_self.find("span.publication-text-toggle__text").text("Read less");
+
+						_self.addClass("publication-text-toggle_active");
+
+						_self.data("collapse", "N");
+					}
+					else{
+						$('[data-post-text="{0}"]'.format(id)).addClass("publication-text_collapsed");
+
+						_self.find("span.publication-text-toggle__text").text("Read more");
+
+						_self.data("collapse", "Y");
+
+						_self.removeClass("publication-text-toggle_active");
+					}
+				}
+			}
+
+			_smc.update_plyr = function() {
+				$("video.plyr").each(function(index, el) {
+					if ($(el).parents("div.plyr__video-wrapper").length == 0) {
+						new Plyr(el, {
+							controls: ["current-time", "progress", "play-large", "play", "fullscreen", "mute"],
+							ratio: "8:6",
+							loadSprite: true,
+							autopause: {enabled: true},
+							muted: false,
+							resetOnEnd: true,
+							invertTime: false,
+							loop: {active: false},
+							iconUrl: "https://yareny.com/themes/default/statics/js/libs/plyr/plyr-code/plyr.svg"
+						});
+					}
+				});
+
+				$("audio.plyr").each(function(index, el) {
+					if ($(el).parents("div.plyr__audio-wrapper").length == 0) {
+						new Plyr(el, {
+							controls: ["current-time", "progress", "play", "mute"],
+							autopause: {enabled: true},
+							iconUrl: "https://yareny.com/themes/default/statics/js/libs/plyr/plyr-code/plyr.svg"
+						});
+					}
+				});
+			}
+
+			return _smc;
+		} 
+
+		if (window.SMColibri === undefined) {
+			window.SMColibri = _SMColibri();
+		}
+	})(window);
+
+	$(document).ready(function($) {
+
+	    SMColibri.init();
+
+	    var clipboard   = new ClipboardJS('.clip-board-copy');
+	    var page_height = $(document).height();
+
+	    clipboard.on('success', function(event) {
+	    	cl_bs_notify("Copied to your clipboard!",500);
+	    });
+
+	    clipboard.on('error', function(event) {
+	    	cl_bs_notify("Failed to copy to clipboard!",3000);
+	    });
+
+	    if (navigator.cookieEnabled == false) {
+	    	$('[data-app="announcement"]').html("<div class='announcement-danger'>Oops! It looks like you have cookies disabled. For this site to work properly, you need to enable cookies.</div>");
+	    }
+
+	    $(document).on('click', 'div[data-app="lsb-back-drop"]', function(event) {
+    		event.preventDefault();
+    		SMColibri.toggleSB();
+    	});
+
+    	SMColibri.update_plyr();
+
+	    setInterval(function() {
+
+	    	var new_page_height = $(document).height();
+	    	var _lozad_         = lozad();
+
+			_lozad_.observe();
+
+	    	if (page_height != new_page_height) {
+	    		page_height = new_page_height;
+	    		SMColibri.fix_sidebars();
+		    	SMColibri.update_ilb();			
+		    	SMColibri.update_plyr();			
+			}
+	    }, 500);
+
+
+	    $(document).on('click tap', 'a[data-spa]', function(event) {
+			event.preventDefault();
+
+			var page_url_source = $(this).attr('href');
+
+			SMColibri.spa_load(page_url_source);	
+
+			return false;
+		});
+
+		$(window).on("popstate", function () {
+
+			if (history.state) {
+				if ($.isEmptyObject(history.state.back_url) != true) {
+					SMColibri.spa_load(history.state.back_url, false);
+				}
+			}
+
+			return false;
+		});
+
+		$(document).on('click tap', '[data-href]', function(event) {
+			event.preventDefault();
+			event.stopPropagation();
+
+			window.open($(this).data('href'), '_blank');
+
+			return false;
+		});
+
+		if (window.mobileCheck() != true) {
+			$(document).on('mouseenter', '[data-uinfo-lbox]', function(event) {
+				event.preventDefault();
+
+				var uid = $(this).data("uinfo-lbox");
+
+				SMColibri.user_lbox(uid, $(this));
+			});
+
+			$(document).on('mouseleave', '[data-uinfo-lbox]', function(event) {
+				event.preventDefault();
+
+				if (cl_empty(SMColibri.userlbox.status)) {
+					clearTimeout(SMColibri.userlbox.pre_delay);
+
+					SMColibri.userlbox.pre_delay = false;
+				}
+
+				if (cl_empty(SMColibri.userlbox.interv) != true) {
+					clearInterval(SMColibri.userlbox.interv);
+				}
+
+				SMColibri.userlbox.interv = setInterval(function() {
+					if (SMColibri.userlbox.lifetm !== "pause" && $.isNumeric(SMColibri.userlbox.lifetm)) {
+						if (SMColibri.userlbox.lifetm <= 0) {
+							SMColibri.user_lbox_rm();
+
+							clearInterval(SMColibri.userlbox.interv);
+						}
+						else{
+							SMColibri.userlbox.lifetm -= 100;
+						}
+					}
+				}, 100);
+			});
+
+			$(document).on('mouseenter', "[data-app='user-info-lbox']", function() {
+				SMColibri.userlbox.lifetm = "pause";
+			});
+
+			$(document).on('mouseleave', "[data-app='user-info-lbox']", function() {
+				SMColibri.userlbox.lifetm = 1000;
+			});
+		}
+	});
+</script>		
+			</div>
+
+	
+	<script>
+		/*
+Enter your custom JS code here.
+
+Please note that the code entered here will be added to the <footer> tag.
+*/	</script>
+</body>
+</html>
+
